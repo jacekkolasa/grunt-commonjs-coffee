@@ -1,22 +1,24 @@
 {
-  "name": "grunt-commonjs",
+  "name": "grunt-commonjs-coffee",
   "description": "Wraps client-side commonjs modules.",
-  "version": "0.2.0rc7",
-  "homepage": "https://github.com/avos/grunt-commonjs",
+  "version": "0.2.1",
+  "homepage": "https://github.com/tuxracer/grunt-commonjs-coffee",
   "author": {
-    "name": "Chris Abrams"
+    "name": "Derek Petersen",
+    "email": "tuxracer@gmail.com",
+    "url": "https://twitter.com/tuxracer"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/avos/grunt-commonjs.git"
+    "url": "git://github.com/tuxracer/grunt-commonjs-coffee.git"
   },
   "bugs": {
-    "url": "https://github.com/avos/grunt-commonjs/issues"
+    "url": "https://github.com/tuxracer/grunt-commonjs-coffee/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/avos/grunt-commonjs/blob/master/LICENSE-MIT"
+      "url": "https://github.com/tuxracer/grunt-commonjs-coffee/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
@@ -24,20 +26,15 @@
     "grunt-commonjs": "bin/grunt-commonjs"
   },
   "engines": {
-    "node": "*"
+    "node": "=> 0.10.0"
   },
   "scripts": {
     "test": "grunt test"
-  },
-  "dependencies": {
-    "grunt": "~0.4.0"
   },
   "devDependencies": {
     "grunt": "~0.4.0"
   },
   "keywords": [
     "gruntplugin"
-  ],
-  "_id": "grunt-commonjs@0.1.0",
-  "_from": "grunt-commonjs@https://github.com/avos/grunt-commonjs/tarball/master"
+  ]
 }
