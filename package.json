@@ -1,7 +1,7 @@
 {
   "name": "grunt-commonjs-coffee",
   "description": "Wraps client-side commonjs modules.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "homepage": "https://github.com/tuxracer/grunt-commonjs-coffee",
   "author": {
     "name": "Derek Petersen",
@@ -15,26 +15,17 @@
   "bugs": {
     "url": "https://github.com/tuxracer/grunt-commonjs-coffee/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/tuxracer/grunt-commonjs-coffee/blob/master/LICENSE-MIT"
-    }
-  ],
-  "main": "Gruntfile.js",
-  "bin": {
-    "grunt-commonjs": "bin/grunt-commonjs"
-  },
+  "license": "MIT",
   "engines": {
-    "node": "=> 0.10.0"
+    "node": ">=0.10.0"
   },
-  "scripts": {
-    "test": "grunt test"
-  },
-  "devDependencies": {
+  "dependencies": {
     "grunt": "~0.4.0"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "coffeescript",
+    "commonjs",
+    "require"
   ]
 }
