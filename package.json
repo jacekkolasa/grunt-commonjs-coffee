@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/tuxracer/grunt-commonjs-coffee/issues"
   },
+  "scripts": {
+    "test": "grunt test"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=0.10.0"
@@ -27,5 +30,10 @@
     "coffeescript",
     "commonjs",
     "require"
-  ]
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-clean": "~0.5.0"
+  }
 }
