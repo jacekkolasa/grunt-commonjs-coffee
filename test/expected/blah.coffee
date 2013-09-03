@@ -1,4 +1,4 @@
-window.require.define "blah": (exports, require, module) ->
+window.require.define 'blah': (exports, require, module) ->
   module.export =
     red: '#ff0000'
     white: '#ffffff'

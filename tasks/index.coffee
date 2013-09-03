@@ -5,31 +5,36 @@ https://github.com/tuxracer/grunt-commonjs-coffee
 Copyright (c) 2013 Team Delicious, AVOS Systems Inc.
 Licensed under the MIT license.
 ###
-
 path = require 'path'
+grunt = require 'grunt'
 
 # commonjs: {
 #   modules: {
 #    cwd: 'assets/',
-#    src: ['assets/*.js'],
+#    src: ['assets/*.coffee'],
 #    dest: 'dist/'
 #   }
 # }
 
+indentStr = (str) ->
+  str.replace(/(\r\n|\n|\r)/g, '\n  ')
+
+isCoffeeScript = (filepath) ->
+  filepath.slice(-7) is '.coffee'
+
+wrapDefine = (filepath, content) ->
+  definePath = filepath.replace /\.\w+$/, ''
+  if isCoffeeScript filepath
+    content = indentStr content
+    "window.require.define '#{definePath}': (exports, require, module) ->\n  #{content}\n"
+  else
+    "window.require.define({'#{definePath}': function(exports, require, module) {\n#{content}}});\n"
+
 module.exports = (grunt) ->
+  grunt.registerMultiTask 'commonjs', 'Wrap .coffee and .js files for commonjs.', ->
+    @filesSrc.forEach (filepath) =>
+      content = grunt.file.read path.join @data.cwd, filepath
+      dest = path.join @data.dest, filepath
+      wrapped = wrapDefine filepath, content
 
-  # ==========================================================================
-  # TASKS
-  # ==========================================================================
-  grunt.registerMultiTask 'commonjs', 'Wrap .js files for commonjs.', ->
-    @files.forEach (file) ->
-      file.src.map (filepath) ->
-        definePath = filepath.replace /\.\w+$/, ''
-        original = grunt.file.read path.join file.cwd, filepath
-        isCoffeeScript = filepath.slice(-7) is '.coffee'
-
-        if isCoffeeScript
-          original = original.replace /(\r\n|\n|\r)/g, '\n  '
-          grunt.file.write file.dest + filepath, "window.require.define \"#{definePath}\": (exports, require, module) ->\n  #{original}\n"
-        else
-          grunt.file.write file.dest + filepath, "window.require.define({\"#{definePath}\": function(exports, require, module) {\n#{original}}});\n\n"
+      grunt.file.write dest, wrapped
