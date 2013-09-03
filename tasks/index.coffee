@@ -21,7 +21,7 @@ wrapDefine = (filepath, content) ->
     content = indentStr content
     "window.require.define '#{definePath}': (exports, require, module) ->\n  #{content}\n"
   else
-    "window.require.define({'#{definePath}': function(exports, require, module) {\n#{content}}});\n"
+    "window.require.define({'#{definePath}': function(exports, require, module) {#{content}}});\n"
 
 module.exports = (grunt) ->
   grunt.registerMultiTask 'commonjs', 'Wrap .coffee and .js files for commonjs.', ->
