@@ -5,16 +5,9 @@ https://github.com/tuxracer/grunt-commonjs-coffee
 Copyright (c) 2013 Team Delicious, AVOS Systems Inc.
 Licensed under the MIT license.
 ###
+
 path = require 'path'
 grunt = require 'grunt'
-
-# commonjs: {
-#   modules: {
-#    cwd: 'assets/',
-#    src: ['assets/*.coffee'],
-#    dest: 'dist/'
-#   }
-# }
 
 indentStr = (str) ->
   str.replace(/(\r\n|\n|\r)/g, '\n  ')
