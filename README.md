@@ -1,50 +1,44 @@
-# grunt-commonjs
+# grunt-commonjs-coffee
 
-Wraps .js files into CommonJS modules for client-side usage.
+Wraps .coffee and .js files into CommonJS modules for client-side usage.
 
 ## Getting Started
-Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: ``npm install grunt-commonjs --save-dev``
+Install this grunt plugin next to your project's [grunt.js gruntfile][getting_started] with: ``npm install grunt-commonjs-coffee --save-dev``
 
-Then add this line to your project's ``Gruntfile.js``:
+Then add this line to your project's ``Gruntfile.coffee``:
 
-```javascript
-grunt.loadNpmTasks('grunt-commonjs');
+```coffeescript
+grunt.loadNpmTasks 'grunt-commonjs-coffee'
 ```
 
 ###CommonJS loader
 You'll need a loader to detect your wrapped packages. You can use this simple [CommonJS loader](https://github.com/chrisabrams/commonjs) which is based off how [brunch.io](http://brunch.io) loads CommonJS packages.
 
-[grunt]: https://github.com/cowboy/grunt
-[getting_started]: https://github.com/cowboy/grunt/blob/master/docs/getting_started.md
+[grunt]: https://github.com/gruntjs/grunt
+[getting_started]: https://github.com/gruntjs/grunt/wiki/Getting-started
 
 ## Documentation
 Configure which files to be copied in your `initConfig`:
 
-```javascript
-grunt.initConfig({
+```coffeescript
+grunt.initConfig
 
-  // ... other configs
+  # ... other configs
 
-  // wrap my modules with define
-  commonjs: {
-    modules: {
-      cwd: 'assets/',
-      src: ['**/*.js'],
+  # wrap my modules with define
+  commonjs:
+    modules:
+      cwd: 'assets/'
+      src: ['**/*.coffee', '**/*.js']
       dest: 'dist/'
-    }
-  },
 
-  // ... other configs
-});
+  # ... other configs
 ```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][grunt].
 
-## Release History
-* 2013 Feb 04 - v0.2.0rc7 - Refactor to use grunt 0.4.x's file properties.
-* 2013 Jan 29 - v0.1.0rc7 - Initial release.
-
 ## License
-Copyright (c) 2012 Team Delicious, AVOS Systems Inc.
+Copyright (c) 2012 Team Delicious, AVOS Systems Inc., Derek Petersen
+
 Licensed under the MIT license.
