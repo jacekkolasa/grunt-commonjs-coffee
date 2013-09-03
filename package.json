@@ -15,6 +15,7 @@
   "bugs": {
     "url": "https://github.com/tuxracer/grunt-commonjs-coffee/issues"
   },
+  "main": "./tasks/index.coffee",
   "scripts": {
     "test": "grunt test"
   },
