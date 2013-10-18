@@ -1,7 +1,7 @@
 {
   "name": "grunt-commonjs-coffee",
   "description": "Wraps client-side commonjs modules.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "homepage": "https://github.com/tuxracer/grunt-commonjs-coffee",
   "author": {
     "name": "Derek Petersen",

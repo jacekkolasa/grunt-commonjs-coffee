@@ -9,7 +9,7 @@ module.exports =
     expected = grunt.file.read 'test/expected/blah.coffee'
     actual = grunt.file.read 'tmp/blah.coffee'
 
-    test.equal actual, expected, 'should prepend CoffeeScript module with define'
+    test.equal actual, expected, 'should prepend CoffeeScript module with register'
     test.done()
 
   js: (test) ->
@@ -18,5 +18,5 @@ module.exports =
     expected = grunt.file.read 'test/expected/foo.js'
     actual = grunt.file.read 'tmp/foo.js'
 
-    test.equal actual, expected, 'should wrap JavaScript module with define'
+    test.equal actual, expected, 'should wrap JavaScript module with register'
     test.done()
