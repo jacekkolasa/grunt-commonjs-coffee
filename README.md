@@ -1,3 +1,5 @@
+# Deprecated in favor of [grunt-browserify](https://npmjs.org/package/grunt-browserify)
+
 # grunt-commonjs-coffee
 
 Wraps .coffee and .js files into CommonJS modules for client-side usage.

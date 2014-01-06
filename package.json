@@ -1,7 +1,7 @@
 {
   "name": "grunt-commonjs-coffee",
-  "description": "Wraps client-side commonjs modules.",
-  "version": "0.3.2",
+  "description": "Deprecated in favor of grunt-browserify",
+  "version": "0.3.3",
   "homepage": "https://github.com/tuxracer/grunt-commonjs-coffee",
   "author": {
     "name": "Derek Petersen",
@@ -11,9 +11,6 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/tuxracer/grunt-commonjs-coffee.git"
-  },
-  "bugs": {
-    "url": "https://github.com/tuxracer/grunt-commonjs-coffee/issues"
   },
   "main": "./tasks/index.coffee",
   "scripts": {
